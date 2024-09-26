@@ -1,0 +1,82 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    /* Font style for the body */
+    background-color: #f4f4f4;
+    /* Light background color */
+    color: #333;
+    /* Dark text color */
+    line-height: 1.6;
+    /* Line height for better readability */
+    padding: 20px;
+    /* Padding around the body */
+}
+
+/* Header Style */
+h1 {
+    text-align: center;
+    /* Center the header text */
+    color: #007BFF;
+    /* Blue color for the header */
+    margin-bottom: 20px;
+    /* Margin below the header */
+}
+
+/* List Style */
+ul {
+    list-style-type: none;
+    /* Remove bullet points from list */
+    padding: 0;
+    /* Remove padding from the list */
+}
+
+li {
+    background-color: #fff;
+    /* White background for each list item */
+    padding: 15px;
+    /* Padding inside each list item */
+    margin: 10px 0;
+    /* Margin between list items */
+    border-radius: 5px;
+    /* Rounded corners for list items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+li:hover {
+    background-color: #e7f3ff;
+    /* Light blue background on hover */
+}
+
+/* Empty State Style */
+ul li {
+    text-align: center;
+    /* Center align text for empty state */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        /* Less padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 24px;
+        /* Smaller font size for header */
+    }
+
+    li {
+        font-size: 14px;
+        /* Smaller font size for list items */
+    }
+}

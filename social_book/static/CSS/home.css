@@ -1,0 +1,68 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    /* Font style for the body */
+    background-color: #f4f4f4;
+    /* Light background color */
+    color: #333;
+    /* Dark text color */
+    line-height: 1.6;
+    /* Line height for better readability */
+}
+
+/* Header Style */
+h1 {
+    text-align: center;
+    /* Centered text */
+    margin: 20px 0;
+    /* Margin around the header */
+    color: #4CAF50;
+    /* Green color for the header */
+}
+
+/* Navigation Style */
+nav {
+    text-align: center;
+    /* Center navigation links */
+    margin: 20px 0;
+    /* Margin around the navigation */
+}
+
+nav a {
+    margin: 0 15px;
+    /* Space between links */
+    padding: 10px 20px;
+    /* Padding for clickable area */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: white;
+    /* White text color */
+    background-color: #007BFF;
+    /* Blue background for links */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Smooth background color transition */
+}
+
+nav a:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        /* Stack links vertically on small screens */
+        margin: 10px 0;
+        /* Margin between links */
+    }
+}

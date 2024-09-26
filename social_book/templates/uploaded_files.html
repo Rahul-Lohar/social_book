@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
+    <title>Uploaded Files</title>
+</head>
+<body>
+    <h1>Your Uploaded Files</h1>
+    <ul>
+        {% for file in files %}
+            <li>
+                {{ file.title }} - <a href="{{ file.file.url }}">Download</a> - 
+                {% if file.visibility %} Public {% else %} Private {% endif %}
+            </li>
+        {% empty %}
+            <li>No uploaded files found.</li>
+        {% endfor %}
+    </ul>
+    <footer>
+            <a href="{% url 'upload_books' %}">Upload More Books</a>
+            <br>
+            <a href="{% url 'dashboard' %}" class="button">Back to Dashboard</a> <!-- Back button -->
+        </footer>           
+</body>
+</html>

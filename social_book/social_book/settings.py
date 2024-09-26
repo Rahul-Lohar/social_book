@@ -11,10 +11,14 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# LOGIN_REDIRECT_URL = '/'  
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -27,6 +31,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'rkv.luhar@gmail.com'  
+EMAIL_HOST_PASSWORD = 'pykpdcrxpwjrqnot'  
 
 # Application definition
 
@@ -37,7 +51,37 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'accounts',
+    'rest_framework',
+    'djoser',
+    'rest_framework.authtoken',
+    'django.contrib.sites',
+    
 ]
+
+SITE_ID = 1
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
+
+DJOSER = {
+    'LOGIN_FIELD': 'email',  
+    'SERIALIZERS': {},
+}
+
+DJOSER = {
+    'SERIALIZERS': {
+        'user_create': 'accounts.serializers.CustomUserCreateSerializer', 
+        'user': 'djoser.serializers.UserSerializer',  
+    },
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -46,7 +90,8 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware", 
+    'django.middleware.csrf.CsrfViewMiddleware',
 ]
 
 ROOT_URLCONF = "social_book.urls"
@@ -54,7 +99,7 @@ ROOT_URLCONF = "social_book.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -100,6 +145,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+
+]
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -115,7 +165,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = "static/"
+#STATIC_URL = "static/"
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Adjust this based on your project structure
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

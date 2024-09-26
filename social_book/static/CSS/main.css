@@ -1,0 +1,151 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    /* Font style for the body */
+    background-color: #f4f4f4;
+    /* Light background color */
+    color: #333;
+    /* Dark text color */
+    line-height: 1.6;
+    /* Line height for better readability */
+    padding: 20px;
+    /* Padding around the body */
+}
+
+/* Header Style */
+h1 {
+    text-align: center;
+    /* Center the header text */
+    color: #007BFF;
+    /* Blue color for the header */
+    margin-bottom: 20px;
+    /* Margin below the header */
+}
+
+/* Main Section Style */
+ul {
+    list-style-type: none;
+    /* Remove bullet points from list */
+    padding: 0;
+    /* Remove padding from the list */
+}
+
+li {
+    background-color: #fff;
+    /* White background for each list item */
+    padding: 15px;
+    /* Padding inside each list item */
+    margin: 10px 0;
+    /* Margin between list items */
+    border-radius: 5px;
+    /* Rounded corners for list items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    display: flex;
+    /* Flexbox for alignment */
+    justify-content: space-between;
+    /* Space between title and actions */
+    align-items: center;
+    /* Center items vertically */
+}
+
+/* Link Style */
+a {
+    color: #007BFF;
+    /* Blue color for links */
+    text-decoration: none;
+    /* Remove underline from links */
+    border: 1px solid #007BFF;
+    /* Border for button style */
+    border-radius: 5px;
+    /* Rounded corners for button */
+    padding: 5px 10px;
+    /* Padding for button */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+a:hover {
+    background-color: #007BFF;
+    /* Blue background on hover */
+    color: white;
+    /* White text on hover */
+}
+
+/* Upload More Books Link Style */
+footer {
+    text-align: center;
+    /* Center the footer content */
+    margin-top: 20px;
+    /* Margin above the footer */
+}
+
+footer a {
+    display: inline-block;
+    /* Make link a block for padding */
+    background-color: #28a745;
+    /* Green background for upload button */
+    color: white;
+    /* White text color for the button */
+    padding: 10px 15px;
+    /* Padding for the button */
+    border-radius: 5px;
+    /* Rounded corners for the button */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover */
+}
+
+footer a:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        /* Less padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 24px;
+        /* Smaller font size for header */
+    }
+
+    li {
+        font-size: 14px;
+        /* Smaller font size for list items */
+    }
+
+.button {
+    display: inline-block;
+    /* Makes the link behave like a button */
+    padding: 10px 15px;
+    /* Padding around the text */
+    margin-top: 20px;
+    /* Space above the button */
+    background-color: #007BFF;
+    /* Button color */
+    color: white;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Smooth color change on hover */
+}
+
+.button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+}

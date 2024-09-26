@@ -1,0 +1,91 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    /* Font style for the body */
+    background-color: #f4f4f4;
+    /* Light background color */
+    color: #333;
+    /* Dark text color */
+    line-height: 1.6;
+    /* Line height for better readability */
+    padding: 20px;
+    /* Padding around the body */
+}
+
+/* Dashboard Title Style */
+h1 {
+    text-align: center;
+    /* Center the title */
+    color: #007BFF;
+    /* Blue color for the title */
+    margin-bottom: 20px;
+    /* Margin below the title */
+}
+
+/* Welcome Message Style */
+.welcome-message {
+    background-color: white;
+    /* White background for the message */
+    padding: 20px;
+    /* Padding inside the message box */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    text-align: center;
+    /* Center the text */
+    font-size: 18px;
+    /* Font size for the welcome message */
+}
+
+/* Additional Links or Buttons */
+nav {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: center;
+    /* Center the navigation */
+    margin-top: 20px;
+    /* Margin above the navigation */
+}
+
+nav a {
+    margin: 0 10px;
+    /* Horizontal margin between links */
+    text-decoration: none;
+    /* Remove underline from links */
+    background-color: #007BFF;
+    /* Blue background for links */
+    color: white;
+    /* White text color for links */
+    padding: 10px 15px;
+    /* Padding for links */
+    border-radius: 5px;
+    /* Rounded corners for links */
+    transition: background-color 0.3s;
+    /* Smooth background color transition */
+}
+
+nav a:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        /* Less padding on smaller screens */
+    }
+
+    nav a {
+        padding: 8px 12px;
+        /* Smaller padding on links */
+    }
+}

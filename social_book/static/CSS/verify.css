@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 7px;
+    box-sizing: border-box;
+    width: -webkit-fill-available;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+   
+    background-color: #f4f4f4;
+    
+    color: #333;
+    
+    line-height: 1.6;
+    
+}
+
+
+form {
+    max-width: 600px;
+    
+    margin: 100px auto;
+    
+    padding: 20px;
+    
+    background-color: white;
+    
+    border-radius: 8px;
+   
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Input Fields Style */
+input[type="text"] {
+    width: 100%;
+    /* Full width for input fields */
+    padding: 10px;
+    /* Padding inside input fields */
+    margin: 10px 0;
+    /* Margin between input fields */
+    border: 1px solid #ccc;
+    /* Light border for inputs */
+    border-radius: 5px;
+    /* Rounded corners for inputs */
+    font-size: 16px;
+    /* Font size for inputs */
+}
+
+/* Button Style */
+button {
+    width: 100%;
+    /* Full width for the button */
+    padding: 10px;
+    /* Padding inside the button */
+    margin-top: 20px;
+    /* Margin above the button */
+    border: none;
+    
+    border-radius: 5px;
+   
+    background-color: #007BFF;
+   
+    color: white;
+    
+    font-size: 16px;
+    
+    cursor: pointer;
+    
+    transition: background-color 0.3s;
+   
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        
+    }
+}

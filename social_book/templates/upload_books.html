@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/uploadB.css' %}">
+    <title>Upload Books</title>
+</head>
+<body>
+    <h1>Upload Books</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    
+    <footer>
+    <a href="{% url 'uploaded_files' %}">View Uploaded Files</a><br>
+    <a href="{% url 'dashboard' %}" class="button">Back to Dashboard</a>
+    </footer>
+</body>
+</html>

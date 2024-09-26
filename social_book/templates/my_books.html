@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Books</title>
+</head>
+<body>
+    <h1>My Uploaded Books</h1>
+    <ul>
+        {% for file in uploaded_files %}
+            <li>{{ file.file.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
