@@ -33,30 +33,25 @@ form {
     
 }
 
-/* Input Fields Style */
+
 input[type="text"] {
     width: 100%;
-    /* Full width for input fields */
+   
     padding: 10px;
-    /* Padding inside input fields */
+    
     margin: 10px 0;
-    /* Margin between input fields */
+    
     border: 1px solid #ccc;
-    /* Light border for inputs */
+    
     border-radius: 5px;
-    /* Rounded corners for inputs */
+ 
     font-size: 16px;
-    /* Font size for inputs */
+   
 }
-
-/* Button Style */
 button {
     width: 100%;
-    /* Full width for the button */
     padding: 10px;
-    /* Padding inside the button */
     margin-top: 20px;
-    /* Margin above the button */
     border: none;
     
     border-radius: 5px;
@@ -75,7 +70,6 @@ button {
 
 button:hover {
     background-color: #0056b3;
-    /* Darker blue on hover */
 }
 
 

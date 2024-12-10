@@ -1,18 +1,16 @@
-/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Style */
 body {
     font-family: Arial, sans-serif;
-    /* Font style for the body */
+    
     background-color: #f4f4f4;
-    /* Light background color */
+   
     color: #333;
-    /* Dark text color */
+   
     line-height: 1.6;
     /* Line height for better readability */
     padding: 20px;
